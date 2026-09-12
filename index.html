@@ -14,19 +14,23 @@
       color: #1c2530;
       background: #ffffff;
     }
-    @media (prefers-color-scheme: dark) {
-      body { color: #e6eaef; background: #12161b; }
-      a { color: #6cb6ff; }
-      code { background: #263038; }
-    }
     h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid rgba(128,128,128,0.25); padding-bottom: 0.3rem; }
     .meta { color: #6b7683; font-size: 0.9rem; margin-bottom: 1.5rem; }
     ul { padding-left: 1.25rem; }
     li { margin: 0.35rem 0; }
-    code { background: #f0f2f4; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+    code { background: #eceff1; color: #1c2530; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
     a { color: #2a6fb0; }
     footer { margin-top: 3rem; color: #6b7683; font-size: 0.85rem; }
+
+    /* Dark-mode overrides last, so they win regardless of source order */
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6eaef; background: #12161b; }
+      h2 { border-bottom-color: rgba(255,255,255,0.15); }
+      .meta, footer { color: #9aa5b1; }
+      code { background: #2b3742; color: #e6eaef; }
+      a { color: #6cb6ff; }
+    }
   </style>
 </head>
 <body>
